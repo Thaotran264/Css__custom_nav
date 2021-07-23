@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <ul class="nav_list">
+            <li class="nav_item active">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="nav-title">Home</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="nav-title">Profile</span>
+                </a>
+            </li><li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="chatbox-outline"></ion-icon></ion-icon></span>
+                    <span class="nav-title">Messages</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="nav-title">Setting</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                    <span class="nav-title">Help</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <span class="nav-title">Password</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav_link">
+                    <span class="nav-icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="nav-title">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const list = document.querySelectorAll('.nav_item');
+
+
+    list.forEach(function (item) {
+        item.addEventListener('click', function() {
+            list.forEach(function (item) {
+                item.classList.remove('active');
+            })
+            
+            this.classList.add('active')
+
+        })
+    })
+    
+</script>
+</html>
